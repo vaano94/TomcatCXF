@@ -1,0 +1,10 @@
+When comparing the implementation of jetty and undertow as transports in CXF, many similarities can be identified.
+As seen in the pictures, both implementations extend an interface called ServerEngine with their own HTTPServerEngine class. This classes describes the transport connection, configures a session, starts/destroys a server, etc. Hence, this is a very important class to implement in order to use Tomcat as a transport. (Maybe, not all classes will be necessary for the proof of concept.)
+The class HTTPDestination binds the bus with the realization. This enables the transaction of messages.
+The class HTTPHandler enables the delivery messages to a client from the server. Hence, the messages from the server are handded over to the HTTPHandler. The HTTPHandler then uses the HTTPDestination class in order to execute the requests on the underlying servlet.
+There is also the class ThreadingParameters, which is a helps to setup the correct number of threads in the embedded server.
+
+One of the main difference is that Undertow has an interface CXFUndertowHttpHandler and two additional classes CxfUndertowServlet and NotFoundHandler. The interface CXFUndertowHttpHandler and the class NotFoundHandler extends HttpHandler and are additional to the UndertowHTTPHandler. The class CxfUndertowServlet implements the class AbstractHTTPServlet of the spring framework.
+The other difference is that Jetty contains a folder called continuations, which mostly handles servlet requests and responses.
+
+Finally, both transports use the factory pattern as a design pattern in their implementations. Therefore, there are several factory classes in both implementations (for example HTTPServerEngineFactory or DestinationFactory).
