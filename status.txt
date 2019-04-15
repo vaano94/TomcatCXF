@@ -1,0 +1,8 @@
+date: 03/04/2019
+We learned about the CXF structure and finally found an integration test: systests/transports/src/test/java/org/apache/cxf/systest/http_jetty/EngineLifecycleTest.java 
+
+date: 08/04/2019
+We compared the Jetty and Undertow implementation and studied the tests in more details.
+
+date:15/04/2019
+We generated two class diagrams (of the existing Jetty and Undertow implementation) and a sequence diagram of the EngineLifecycleTest. We wrote short summaries of our findings.
