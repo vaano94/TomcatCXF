@@ -1,3 +1,0 @@
-The test class EngineLifeCycleTest is a specific Jetty implementation. A similar test for the Undertow implementation is missing. The test class contains two tests: testUpDownWithServlets and testServerUpDownUp.
-The first test testUpDownWithServlets checks if a created embedded Jetty server can be used as a transport in CXF. After setting up the embedded Jetty server, it adds a servlet to it. Then it verfies its availability and invokes the service. Finally, the server is shutdown.
-The second test testServerUpDownUp creates an embedded Jetty server, checks the availability of a static page and destroys the server. This is done twice and ensures that the shutdown is successful without hindering a new start.

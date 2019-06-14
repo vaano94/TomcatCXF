@@ -23,5 +23,6 @@ or
 [Undertow](https://github.com/gcorsini/cxf/blob/master/rt/transports/http-undertow/src/main/java/org/apache/cxf/transport/http_undertow/ThreadingParameters.java)
 ).
 
-As explained in our previous presentation, we will first write tests that will ensure that every part is working as expected (TDD).
+~~As explained in our previous presentation, we will first write tests that will ensure that every part is working as expected (TDD).~~
+Unfortunately, TDD didn't work out as the documentation in CXF is quite scarce. We proceeded by implementing tests as soon as we could.
 
