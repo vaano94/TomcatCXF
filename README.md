@@ -16,7 +16,7 @@ We generated two class diagrams (of the existing Jetty and Undertow implementati
 Debugging how Jetty and Undertow work. (Especially integration test of Jetty.)
 
 **date: 29.04.2019**
-Finished [midpoint presentation](documents/MIDPOINT PRESENTATION_Apache Tomcat as a transport in CXF.pdf) with preparation. Debugging why the DestinationFactory bean loaded Jetty instead of Tomcat in our integration test. Solved this by moving the integration test to it's own directory: [systests/transport-tomcat/src/test/java/org/apache/cxf/systest/http_tomcat/TomcatEngineLifecycleTest.java](https://github.com/gcorsini/cxf/blob/transport_tomcat/systests/transport-tomcat/src/test/java/org/apache/cxf/systest/http_tomcat/TomcatEngineLifecycleTest.java)
+Finished [midpoint presentation](presentations%20and%20reports/MIDPOINT%20PRESENTATION_Apache%20Tomcat%20as%20a%20transport%20in%20CXF.pdf) with preparation. Debugging why the DestinationFactory bean loaded Jetty instead of Tomcat in our integration test. Solved this by moving the integration test to it's own directory: [systests/transport-tomcat/src/test/java/org/apache/cxf/systest/http_tomcat/TomcatEngineLifecycleTest.java](https://github.com/gcorsini/cxf/blob/transport_tomcat/systests/transport-tomcat/src/test/java/org/apache/cxf/systest/http_tomcat/TomcatEngineLifecycleTest.java)
 
 **date: 06.05.2019**
 While having the same code, we both got different errors. Therefore, one of us pulled the state again and importet the same project settings from the other. Adding a servlet creates a NullPointerException due to missing implementations in the core engine class.
@@ -34,4 +34,4 @@ We were able to add a filter for a servlet and make it run with the embedded Tom
 We are trying to add multiple servlets to the tomcat server. Fixing errors in the engine class, for example removing servants correctly.
 
 **date: 11.06.2019**
-We are trying to add support for https. Additionally, we are working on a proof of concept / demo that uses an embedded Tomcat as a transport in CXF. Finally, we are also finishing the [final presentation](documents/FINAL PRESENTATION_Apache Tomcat as a transport in CXF.pdf) and [final report](documents/FINAL REPORT_Apache Tomcat as a transport in CXF.pdf)
+We are trying to add support for https. Additionally, we are working on a proof of concept / demo that uses an embedded Tomcat as a transport in CXF. Finally, we are also finishing the [final presentation](presentations%20and%20reports/FINAL%20PRESENTATION_Apache%20Tomcat%20as%20a%20transport%20in%20CXF.pdf) and [final report](presentations%20and%20reports/FINAL%20REPORT_Apache%20Tomcat%20as%20a%20transport%20in%20CXF.pdf)
